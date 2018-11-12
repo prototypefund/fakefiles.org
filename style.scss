@@ -1,0 +1,134 @@
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Rubik, sans-serif;
+  line-height: 1.5;
+  color: darken(grey, 45%);
+}
+
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+@mixin bp-xs() {
+  @media (min-width: $screen-sm * 0.6) {
+    @content;
+  }
+}
+
+@mixin bp-sm() {
+  @media (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin bp-md() {
+  @media (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin bp-lg() {
+  @media (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+html {
+  background-color: #ededed;
+}
+
+.header,
+.main,
+.footer {
+  display: block;
+  width: auto;
+  padding: 20px;
+
+  @include bp-sm {
+    padding: 30px 10% 30px 10%;
+  }
+
+  @include bp-sm {
+    padding: 40px 20% 40px 20%;
+  }
+}
+
+.header {
+  background-color: white;
+
+  &__logo {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+
+    @include bp-xs {
+      width: 400px;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+.main {
+  background-color: white;
+
+  &__title {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 1.1em;
+    padding-top: 10px;
+  }
+}
+
+.footer {
+  * {
+    color: darken(grey, 10%);
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+
+    @include bp-sm {
+      float: left;
+      width: 45%;
+      margin-right: 10%;
+    }
+  }
+
+  &__title {
+    font-size: 1em;
+    padding-top: 20px;
+    font-weight: 500;
+
+    @include bp-sm {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__text {
+    font-size: 0.8em;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

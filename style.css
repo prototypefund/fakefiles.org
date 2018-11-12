@@ -1,0 +1,80 @@
+@import url(./normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Rubik, sans-serif;
+  line-height: 1.5;
+  color: #0d0d0d; }
+
+html {
+  background-color: #ededed; }
+
+.header,
+.main,
+.footer {
+  display: block;
+  width: auto;
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .header,
+    .main,
+    .footer {
+      padding: 30px 10% 30px 10%; } }
+  @media (min-width: 768px) {
+    .header,
+    .main,
+    .footer {
+      padding: 40px 20% 40px 20%; } }
+
+.header {
+  background-color: white; }
+  .header__logo {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+    @media (min-width: 460.8px) {
+      .header__logo {
+        width: 400px; } }
+  .header__subtitle {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 300; }
+
+.main {
+  background-color: white; }
+  .main__title {
+    font-size: 2em;
+    font-weight: 500; }
+  .main__text {
+    font-size: 1.1em;
+    padding-top: 10px; }
+
+.footer * {
+  color: #676767; }
+.footer__img {
+  display: block;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .footer__img {
+      float: left;
+      width: 45%;
+      margin-right: 10%; } }
+.footer__title {
+  font-size: 1em;
+  padding-top: 20px;
+  font-weight: 500; }
+  @media (min-width: 768px) {
+    .footer__title {
+      margin-top: 0;
+      padding-top: 0; } }
+.footer__text {
+  font-size: 0.8em; }
+  .footer__text strong {
+    font-weight: 500; }
+.footer:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+/*# sourceMappingURL=style.css.map */
