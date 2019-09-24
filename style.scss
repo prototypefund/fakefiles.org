@@ -45,6 +45,7 @@ html {
 .main,
 .footer {
   display: block;
+  position: relative;
   width: auto;
   padding: 20px;
 
@@ -71,7 +72,6 @@ html {
   }
 
   &__subtitle {
-    padding-top: 10px;
     text-align: center;
     font-weight: 300;
   }
@@ -85,9 +85,53 @@ html {
     font-weight: 500;
   }
 
+  &__subtitle {
+    padding-top: 25px;
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+
   &__text {
     font-size: 1.1em;
     padding-top: 10px;
+  }
+
+  &__newsletter {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    #mc_embed_signup {
+      padding-top: 20px;
+
+      .email {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        line-height: 30px;
+        border: 1px solid grey;
+        padding: 5px;
+        background-color: white;
+      }
+      .button {
+        display: block;
+        width: 30%;
+        border: 1px solid grey;
+        padding: 5px;
+        line-height: 30px;
+        background-color: lighten(grey, 30%);
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten(grey, 20%);
+        }
+      }
+    }
+
+    &__term {
+      padding-top: 10px;
+      font-size: .8em;
+      color: grey;
+    }
   }
 }
 
@@ -96,15 +140,17 @@ html {
     color: darken(grey, 10%);
   }
 
+  &__section {
+    @include bp-sm {
+      float: left;
+      width: 30%;
+      margin-right: 3%;
+    }
+  }
+
   &__img {
     display: block;
     width: 100%;
-
-    @include bp-sm {
-      float: left;
-      width: 45%;
-      margin-right: 10%;
-    }
   }
 
   &__title {

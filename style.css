@@ -14,6 +14,7 @@ html {
 .main,
 .footer {
   display: block;
+  position: relative;
   width: auto;
   padding: 20px; }
   @media (min-width: 768px) {
@@ -37,7 +38,6 @@ html {
       .header__logo {
         width: 400px; } }
   .header__subtitle {
-    padding-top: 10px;
     text-align: center;
     font-weight: 300; }
 
@@ -46,20 +46,51 @@ html {
   .main__title {
     font-size: 2em;
     font-weight: 500; }
+  .main__subtitle {
+    padding-top: 25px;
+    font-size: 1.5em;
+    font-weight: 500; }
   .main__text {
     font-size: 1.1em;
     padding-top: 10px; }
+  .main__newsletter {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .main__newsletter #mc_embed_signup {
+      padding-top: 20px; }
+      .main__newsletter #mc_embed_signup .email {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        line-height: 30px;
+        border: 1px solid grey;
+        padding: 5px;
+        background-color: white; }
+      .main__newsletter #mc_embed_signup .button {
+        display: block;
+        width: 30%;
+        border: 1px solid grey;
+        padding: 5px;
+        line-height: 30px;
+        background-color: #cdcdcd;
+        cursor: pointer; }
+        .main__newsletter #mc_embed_signup .button:hover {
+          background-color: #b3b3b3; }
+    .main__newsletter__term {
+      padding-top: 10px;
+      font-size: .8em;
+      color: grey; }
 
 .footer * {
   color: #676767; }
+@media (min-width: 768px) {
+  .footer__section {
+    float: left;
+    width: 30%;
+    margin-right: 3%; } }
 .footer__img {
   display: block;
   width: 100%; }
-  @media (min-width: 768px) {
-    .footer__img {
-      float: left;
-      width: 45%;
-      margin-right: 10%; } }
 .footer__title {
   font-size: 1em;
   padding-top: 20px;
